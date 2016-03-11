@@ -18,7 +18,7 @@ defmodule Problem3 do
   def prime?(1), do: false
   def prime?(2), do: true
   def prime?(x) do
-    not(2..(sqrt(x)) |> Enum.any?(&(divisible?(x, &1))))
+    not(2..sqrt(x) |> Enum.any?(&divisible?(x, &1)))
   end
 
   def sqrt(x), do: :math.sqrt(x) |> trunc
